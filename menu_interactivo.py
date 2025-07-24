@@ -3,13 +3,18 @@
 # Definicion de funciones
 
 def ingreso_numeros():
+    numeros = []
     numero = int(input("Ingresa la cantidad de números que deseas evaluar (digitos)"))
 
     if numero > 0:
-        def suma_total():
+        def suma_total(numero):
+            suma = 0
             for n in numeros:
-                suma = n + n
+                suma += n
                 print(f"EL total es de: {suma}")
+
+        def promedio(numero):
+            return sum(numeros) / len(numeros)
 
 
 
