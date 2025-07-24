@@ -4,10 +4,10 @@
 
 def suma_total(numero):
     suma = 0
-    for n in numeros:
+    for n in numero:
         if numero != 0:
             suma += n
-        return suma
+    return suma
 
 def promedio(numero):
         return sum(numero) / len(numero)
@@ -58,7 +58,6 @@ while True:
                     numeros.append(numero)
                 elif numero == 0:
                     break
-            resultado = suma_total(numeros)
             print(f"La suma total es de: {suma_total(numeros)}")
 
 
