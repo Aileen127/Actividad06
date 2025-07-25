@@ -29,8 +29,8 @@ def cantidad_positivos_negativos(numero):
 def area_triangulo(altura,base):
     return (altura * base) / 2
 
-def verificar_par_impar(numero):
-        return numero % 2 == 0
+def verificar_par_impar(num):
+        return num % 2 == 0
 
 def calcular_promedio(calificacion):
     suma_calificacion = 0
@@ -41,8 +41,14 @@ def calcular_promedio(calificacion):
     return promedio
 
 def mayor_menor(lista_numeros):
-    if numero > 0:
-        return max(lista_numeros), min(lista_numeros)
+    if lista_numeros:
+        maximo =  max(lista_numeros)
+        minimo = min(lista_numeros)
+        print(f"El numero máximo en la lista es {maximo}")
+        print(f"El numero máximo en la lista es {minimo}")
+
+    else:
+        print("La lista esta vacia.")
 
 
 
@@ -85,8 +91,8 @@ while True:
             print(f"El area del triangulo es de: {area_triangulo(altura,base)}")
 
         case "3":
-            numero = input("Ingresa un número para verificar si es impar o par: ")
-            if verificar_par_impar(numero):
+            num = int(input("Ingresa un número para verificar si es impar o par: "))
+            if verificar_par_impar(num):
                 print("El número es par.")
             else:
                 print("El número es impar.")
@@ -94,7 +100,7 @@ while True:
         case "4":
             calificaciones = []
             while True:
-                calificacion = float(input("Ingresa los calificaciones que deseas evaluar, ingresa 0 si ya NO deseas ingresar más números: "))
+                calificacion = float(input("Ingresa los calificaciones que deseas evaluar, ingresa 0 si ya NO deseas ingresar más opciones: "))
                 if calificacion != 0:
                     calificaciones.append(calificacion)
                 elif calificacion == 0:
@@ -102,8 +108,15 @@ while True:
                 print(f"El promedio es de {calcular_promedio(calificaciones)}")
 
         case "5":
+            lista_numeros = []
+            while True:
+                numero = int(input("Ingresa un numero, si ya no deseas agregar más ingresa 0: "))
+                if numero != 0:
+                    lista_numeros.append(numero)
+                elif numero == 0:
+                    break
 
-
+            mayor_menor(lista_numeros)
 
         case "6":
             break
