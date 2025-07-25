@@ -15,22 +15,21 @@ def promedio(numero):
 def cantidad_positivos_negativos(numero):
     positivo=0
     negativo=0
-    for n in range(numero):
+    for n in numero:
         if n > 0:
             positivo += 1
-            print(f"Hay {positivo}  números positivos")
+
 
         elif n < 0:
             negativo += 1
-            print(f"Hay {negativo} números negativos")
+
+    print(f"Hay {positivo}  números positivos")
+    print(f"Hay {negativo} números negativos")
 
 
 
 
 
-
-    else:
-        print("Ingresa un dato valido por favor")
 
 
 
@@ -58,7 +57,11 @@ while True:
                     numeros.append(numero)
                 elif numero == 0:
                     break
+            cantidad_positivos_negativos(numeros)
             print(f"La suma total es de: {suma_total(numeros)}")
+            print(f"El promedio total es de: {promedio(numeros)}")
+
+
 
 
         case "6":
